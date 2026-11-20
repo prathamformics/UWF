@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UnlimitedWF — Design Subscription & Webflow Studio</title>
+  <meta name="description"
+    content="Design subscription — or a one-off project, if you just need one task. UI/UX design, branding and development.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Instrument Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Ambient background glow layers (Global across all sections) -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="ambient-glow-secondary" aria-hidden="true"></div>
+
+  <!-- Interactive Mouse Pixel Grid Canvas (Global across all sections) -->
+  <canvas class="pixel-grid-canvas" id="pixelGridCanvas" aria-hidden="true"></canvas>
+
+  <!-- Custom Square Outline Cursor & Magnetic Morph -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <div class="cursor-box" id="cursorBox"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <div class="intro-hero-frame">
+    <section class="intro-hero" id="hero">
+
+      <!-- Fullscreen WebGL Liquid Glass Canvas Mount -->
+      <div class="originkit-surface" id="originkitSurface"></div>
+
+      <!-- Top Group: Header Navigation with Staggered Entrance Reveal -->
+      <div class="hero-top-group">
+        <!-- Site Header Navigation -->
+        <header class="site-header">
+          <!-- Brand Logo -->
+          <div class="brand-group reveal-nav-item" style="--nav-i: 1;">
+            <a href="#hero" class="brand-logo" aria-label="UnlimitedWF Home">
+              <span class="brand-title">unlimited<span class="brand-dot">.</span><em class="brand-serif">wf</em></span>
+            </a>
+          </div>
+
+          <!-- Main Nav Links -->
+          <nav class="site-nav" aria-label="Primary Navigation">
+            <a href="#projects" class="nav-item reveal-nav-item" style="--nav-i: 2;">Projects</a>
+            <a href="#process" class="nav-item reveal-nav-item" style="--nav-i: 3;">Process</a>
+            <a href="#services" class="nav-item reveal-nav-item" style="--nav-i: 4;">Services</a>
+            <a href="#pricing" class="nav-item reveal-nav-item" style="--nav-i: 5;">Pricing</a>
+            <a href="#contact" class="nav-item reveal-nav-item" style="--nav-i: 6;">Contact</a>
+          </nav>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-toggle reveal-nav-item" id="mobileToggle" aria-label="Toggle navigation"
+            aria-expanded="false" style="--nav-i: 3;">
+            <span></span>
+            <span></span>
+          </button>
+        </header>
+      </div>
+
+      <!-- Center Anchor Shell (Provides spacing for the liquid glass carousel) -->
+      <div class="carousel-shell" id="hero-carousel"></div>
+
+      <!-- Bottom Hero Content -->
+      <div class="hero-bottom-group" id="hero-content">
+        <div class="hero-bottom-main">
+          <!-- Kicker Tag -->
+          <div class="intro-kicker reveal-fade-up" style="--fade-i: 1;">
+            <span class="kicker-dot" aria-hidden="true"></span>
+            <span class="kicker-text">Independent Design Studio</span>
+          </div>
+
+          <!-- Main Headline with Masked Curtain Reveal -->
+          <h1 class="intro-title" id="intro-headline">
+            <span class="headline-mask">
+              <span class="headline-inner line-1">
+                <strong>Digital things</strong>
+              </span>
+            </span>
+            <br>
+            <span class="headline-mask">
+              <span class="headline-inner line-2">
+                <em class="title-serif">worth noticing.</em>
+              </span>
+            </span>
+          </h1>
+        </div>
+
+        <div class="hero-bottom-aside reveal-fade-up" style="--fade-i: 3;">
+          <!-- Description Subtext -->
+          <p class="intro-subtext">
+            We design identities, interfaces and websites for brands that want to move differently.
+          </p>
+
+          <!-- CTA Button -->
+          <div class="intro-actions">
+            <a href="#projects" class="btn-cta" aria-label="See our work">
+              <span>See our work</span>
+              <span class="btn-arrow" aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ===== LATEST PROJECTS SECTION ===== -->
+  <section class="projects-section" id="projects" aria-label="Latest Projects">
+    <!-- Top Header -->
+    <div class="projects-header">
+      <h2 class="projects-heading">Latest projects</h2>
+      <a href="#all-projects" class="projects-all-btn" id="projectsAllBtn" aria-label="View all projects">
+        <span class="projects-all-text">All projects</span>
+        <span class="projects-all-badge" aria-hidden="true">+</span>
+      </a>
+    </div>
+
+    <!-- Divider Line -->
+    <div class="projects-header-divider" aria-hidden="true"></div>
+
+    <!-- Interactive Projects List Area -->
+    <div class="projects-list" id="projectsList">
+
+      <!-- Project 001: Surfsky.io -->
+      <a href="#case/surfsky" class="project-row" data-project="surfsky" data-preview="surfsky_preview.jpg" aria-label="Open case Surfsky.io">
+        <div class="project-meta">
+          <span class="project-num">001 /</span>
+          <div class="project-meta-right">
+            <span class="project-services">
+              <span class="service-tag">UI/UX design</span>
+              <span class="service-tag">Branding</span>
+            </span>
+            <span class="project-year">2026</span>
+          </div>
+        </div>
+        <div class="project-title-wrap">
+          <h3 class="project-title">Surfsky.io</h3>
+          <span class="project-arrow-btn" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+        <div class="project-row-line" aria-hidden="true"></div>
+      </a>
+
+      <!-- Project 002: Proof -->
+      <a href="#case/proof" class="project-row" data-project="proof" data-preview="proof_preview.jpg" aria-label="Open case Proof">
+        <div class="project-meta">
+          <span class="project-num">002 /</span>
+          <div class="project-meta-right">
+            <span class="project-services">
+              <span class="service-tag">UI/UX design</span>
+              <span class="service-tag">Brand identity</span>
+            </span>
+            <span class="project-year">2026</span>
+          </div>
+        </div>
+        <div class="project-title-wrap">
+          <h3 class="project-title">Proof</h3>
+          <span class="project-arrow-btn" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+        <div class="project-row-line" aria-hidden="true"></div>
+      </a>
+
+      <!-- Project 003: Siriteia -->
+      <a href="#case/siriteia" class="project-row" data-project="siriteia" data-preview="siriteia_preview.jpg" aria-label="Open case Siriteia">
+        <div class="project-meta">
+          <span class="project-num">003 /</span>
+          <div class="project-meta-right">
+            <span class="project-services">
+              <span class="service-tag">UI/UX design</span>
+              <span class="service-tag">Landing page</span>
+            </span>
+            <span class="project-year">2026</span>
+          </div>
+        </div>
+        <div class="project-title-wrap">
+          <h3 class="project-title">Siriteia</h3>
+          <span class="project-arrow-btn" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+        <div class="project-row-line" aria-hidden="true"></div>
+      </a>
+
+      <!-- Project 004: Cadvel -->
+      <a href="#case/cadvel" class="project-row" data-project="cadvel" data-preview="Rectangle 15.png" aria-label="Open case Cadvel">
+        <div class="project-meta">
+          <span class="project-num">004 /</span>
+          <div class="project-meta-right">
+            <span class="project-services">
+              <span class="service-tag">UI/UX design</span>
+              <span class="service-tag">Branding</span>
+            </span>
+            <span class="project-year">2026</span>
+          </div>
+        </div>
+        <div class="project-title-wrap">
+          <h3 class="project-title">Cadvel</h3>
+          <span class="project-arrow-btn" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+        <div class="project-row-line" aria-hidden="true"></div>
+      </a>
+
+      <!-- Project 005: Ö Labs -->
+      <a href="#case/o-labs" class="project-row" data-project="o-labs" data-preview="Rectangle 16.png" aria-label="Open case Ö Labs">
+        <div class="project-meta">
+          <span class="project-num">005 /</span>
+          <div class="project-meta-right">
+            <span class="project-services">
+              <span class="service-tag">Product design</span>
+              <span class="service-tag">3D Motion</span>
+            </span>
+            <span class="project-year">2026</span>
+          </div>
+        </div>
+        <div class="project-title-wrap">
+          <h3 class="project-title">Ö Labs</h3>
+          <span class="project-arrow-btn" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+        <div class="project-row-line" aria-hidden="true"></div>
+      </a>
+
+    </div>
+
+    <!-- Floating Interactive Cursor Preview Card (Follows cursor smoothly over rows) -->
+    <div class="project-floating-preview" id="projectFloatingPreview" aria-hidden="true">
+      <div class="preview-card-inner">
+        <img src="surfsky_preview.jpg" alt="Project preview" id="floatingPreviewImg" class="floating-preview-img" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT YOU'LL GET / PROCESS BENTO SECTION ===== -->
+  <section class="process-section" id="process" aria-label="What You'll Get — Webflow & Web Design Process">
+    <div class="process-container">
+      
+      <!-- Centered Section Header -->
+      <div class="bento-header">
+        <div class="bento-kicker-badge">
+          <span class="bento-kicker-icon">✱</span>
+          <span>What you'll get</span>
+        </div>
+        <h2 class="bento-main-heading">
+          We turn bespoke designs into<br class="bento-title-break"> scalable Webflow experiences.
+        </h2>
+      </div>
+
+      <!-- Bento Grid (3 Top Cards + 2 Wide Bottom Cards) -->
+      <div class="bento-grid">
+
+        <!-- 1. Cost-effective & rapid (Growth / Sprint Velocity) -->
+        <article class="bento-card bento-card-compact">
+          <div class="bento-widget widget-chart">
+            <div class="chart-header">
+              <span class="chart-label">Sprint velocity</span>
+            </div>
+            <div class="chart-bars" id="growthBars">
+              <span class="bar" style="--h: 38%; --delay: 0.05s;"></span>
+              <span class="bar" style="--h: 58%; --delay: 0.15s;"></span>
+              <span class="bar" style="--h: 46%; --delay: 0.25s;"></span>
+              <span class="bar" style="--h: 74%; --delay: 0.35s;"></span>
+              <span class="bar" style="--h: 92%; --delay: 0.45s;"></span>
+              <span class="bar" style="--h: 62%; --delay: 0.2s;"></span>
+              <span class="bar" style="--h: 98%; --delay: 0.55s;"></span>
+              <span class="bar" style="--h: 78%; --delay: 0.38s;"></span>
+              <span class="bar" style="--h: 84%; --delay: 0.48s;"></span>
+              <span class="bar" style="--h: 68%; --delay: 0.28s;"></span>
+              <span class="bar" style="--h: 90%; --delay: 0.6s;"></span>
+            </div>
+            <div class="chart-timeline">
+              <span>Figma</span>
+              <span>Build</span>
+              <span>Launch</span>
+            </div>
+          </div>
+          <div class="bento-content">
+            <h3 class="bento-title">Cost-effective & rapid</h3>
+            <p class="bento-desc">Senior-level UI/UX design & Webflow development at a predictable monthly rate.</p>
+          </div>
+        </article>
+
+        <!-- 2. Tailor-made design & build (Dynamic Island / Notification Card) -->
+        <article class="bento-card bento-card-compact">
+          <div class="bento-widget widget-notification">
+            <div class="island-device">
+              <div class="island-top-pill">
+                <span class="island-dot"></span>
+                <span>CLIENT-FIRST CMS</span>
+              </div>
+              <div class="island-card">
+                <div class="island-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                </div>
+                <div class="island-text-group">
+                  <div class="island-status-line">
+                    <span class="status-dot"></span>
+                    <span class="status-tag">PRODUCTION READY</span>
+                  </div>
+                  <h4 class="island-card-title">Custom Webflow build</h4>
+                  <span class="island-card-time">Staged 2 mins ago</span>
+                </div>
+              </div>
+              <div class="island-guides" aria-hidden="true">
+                <span class="guide-line"></span>
+                <span class="guide-line"></span>
+                <span class="guide-line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="bento-content">
+            <h3 class="bento-title">Tailor-made design & build</h3>
+            <p class="bento-desc">Clean HTML/CSS structure, custom interactions, and zero templates or code bloat.</p>
+          </div>
+        </article>
+
+        <!-- 3. Scalable as you grow (Growth Curve Graph) -->
+        <article class="bento-card bento-card-compact">
+          <div class="bento-widget widget-curve">
+            <canvas class="curve-canvas" id="curveCanvas" aria-label="Scalable as you grow trajectory"></canvas>
+            <div class="curve-grid-labels" aria-hidden="true">
+              <span>100</span>
+              <span>99</span>
+              <span>95</span>
+              <span>85</span>
+              <span>50</span>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="bento-content">
+            <h3 class="bento-title">Scalable as you grow</h3>
+            <p class="bento-desc">Enterprise CMS architecture, clean class naming, and lightning-fast global hosting.</p>
+          </div>
+        </article>
+
+        <!-- 4. Workflow integration (Wide Card with Apps Grid) -->
+        <article class="bento-card bento-card-wide">
+          <div class="bento-wide-content">
+            <h3 class="bento-title">Workflow<br>integration</h3>
+            <p class="bento-desc">Seamlessly connect all your favorite design & dev tools.</p>
+          </div>
+          <div class="bento-wide-visual">
+            <div class="apps-grid">
+              <!-- Webflow -->
+              <div class="app-icon" data-app="Webflow" title="Webflow">
+                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                  <path d="M28.09 9.33c-.08-.03-.24-.03-.31 0l-3.87 9.24-2.8-9.21c-.04-.04-.15-.06-.21-.06h-3.08c-.08 0-.19.04-.23.1l-3.89 9.17-3.23-9.21c-.04-.04-.15-.06-.21-.06H4.21c-.13 0-.25.13-.2.27l5.54 13.97c.04.06.15.1.23.1h3.76c.08 0 .19-.04.23-.1l3.59-8.49 2.5 8.49c.04.06.15.1.23.1h3.76c.08 0 .19-.04.23-.1l6.19-13.97c.05-.14-.07-.27-.2-.27h-2.18z" fill="#4353FF"/>
+                </svg>
+              </div>
+              <!-- Figma -->
+              <div class="app-icon" data-app="Figma" title="Figma">
+                <svg width="24" height="24" viewBox="0 0 38 57" fill="none">
+                  <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                  <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                  <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                  <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                  <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                </svg>
+              </div>
+              <!-- Relume -->
+              <div class="app-icon" data-app="Relume" title="Relume">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <!-- Slack -->
+              <div class="app-icon" data-app="Slack" title="Slack">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.528 2.528 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z" fill="#E01E5A"/>
+                  <path d="M8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312z" fill="#36C5F0"/>
+                  <path d="M18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312z" fill="#2EB67D"/>
+                  <path d="M15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.528 2.528 0 0 1 2.52-2.521h6.313A2.528 2.528 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z" fill="#ECB22E"/>
+                </svg>
+              </div>
+              <!-- GSAP / Code -->
+              <div class="app-icon" data-app="GSAP" title="GSAP & Custom Code">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <polyline points="16 18 22 12 16 6" stroke="#00d2ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="8 6 2 12 8 18" stroke="#00d2ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <!-- Notion -->
+              <div class="app-icon" data-app="Notion" title="Notion">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff">
+                  <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.69c-.466-.373-.886-.466-1.819-.373L3.713 2.389c-.373.047-.466.233-.326.42l1.072 1.4zm1.12 3.125v13.52c0 .886.42 1.212 1.353 1.165l13.915-.839c.933-.047.933-.653.933-1.306V6.446c0-.653-.28-.98-1.026-.933l-14.195.84c-.7.046-.98.373-.98.98zm11.755.793c.42.046.7.373.7.84v10.354c0 .467-.28.793-.7.793-.42 0-.606-.233-.886-.606l-4.71-6.903v6.577c.373.187.653.42.653.793 0 .42-.326.653-.746.653l-2.006.14c-.42 0-.653-.233-.653-.653 0-.42.233-.653.606-.793V9.324c-.373-.187-.653-.42-.653-.793 0-.42.28-.653.746-.653l2.473-.14 4.524 6.81V8.95c-.373-.187-.653-.42-.653-.793 0-.42.327-.653.793-.653l2.006.14z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Collaborate real-time (Wide Card with Avatars & Cursor) -->
+        <article class="bento-card bento-card-wide">
+          <div class="bento-wide-content">
+            <h3 class="bento-title">Collaborate<br>real-time</h3>
+            <p class="bento-desc">Direct communication with your dedicated Webflow developer & designer.</p>
+          </div>
+          <div class="bento-wide-visual">
+            <div class="avatars-cluster">
+              <div class="collab-avatar ring-cyan" title="UI/UX Designer">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="UI/UX Designer" loading="lazy" />
+              </div>
+              <div class="collab-avatar ring-blue" title="Lead Webflow Dev">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Webflow Developer" loading="lazy" />
+              </div>
+              <div class="collab-avatar ring-purple" title="Creative Technologist">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80" alt="Creative Technologist" loading="lazy" />
+              </div>
+              <div class="collab-avatar ring-ghost" aria-hidden="true" title="Your Team"></div>
+
+              <!-- Animated Floating Multi-Cursor with Name Tag -->
+              <div class="live-collab-cursor" id="collabCursor">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3 3l7 18 3-7 7-3L3 3z"/>
+                </svg>
+                <span class="cursor-tag">Webflow Dev</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bottom Floating Pill Chips — Webflow & Design Capabilities -->
+      <div class="bento-chips-area">
+        <div class="chips-row">
+          <span class="bento-chip"><span class="chip-star">✱</span> Figma to Webflow</span>
+          <span class="bento-chip"><span class="chip-star">✱</span> Client-First architecture</span>
+          <span class="bento-chip"><span class="chip-star">✱</span> Custom GSAP animations</span>
+          <span class="bento-chip"><span class="chip-star">✱</span> Scalable CMS collections</span>
+        </div>
+        <div class="chips-row">
+          <span class="bento-chip"><span class="chip-star">✱</span> 99+ Lighthouse performance</span>
+          <span class="bento-chip"><span class="chip-star">✱</span> Unlimited design requests</span>
+          <span class="bento-chip"><span class="chip-star">✱</span> Pause or cancel anytime</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR SERVICES: "THIS IS OUR THING" (TWO26.STUDIO SIGNATURE ARCHITECTURE) ===== -->
+  <section class="section-services" id="services" aria-label="Our Services — This is our thing">
+    <div class="section-services-wrapper">
+      
+      <!-- Section Header -->
+      <div class="section-services-header">
+        <div class="section-services-kicker">
+          <span class="kicker-dot"></span>
+          <span>Our Services</span>
+        </div>
+        <div class="section-services-heading-wrapper">
+          <h2 class="section-services-heading">THIS IS OUR THING</h2>
+        </div>
+      </div>
+
+      <!-- Services Body Container (Hosts SVG Path & 7 Service Layers) -->
+      <div class="section-services-body">
+        
+        <!-- The 7 Service Layers with Lottie Expanding Spacers & Tilted Capsules -->
+        <div class="services-layers">
+          
+          <!-- Layer 1: Brand Strategy -->
+          <div class="service-layer layer-1">
+            <div class="service-block one">
+              <div class="service-text">Brand</div>
+              <div class="service-svg" data-lottie="lottie-strategy.json"></div>
+              <div class="service-text">Strategy</div>
+              <div class="service-block-para-wrapper">
+                <p class="service-block-para">We find the idea, the angle and the reasons people should care.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layer 2: Brand Identity -->
+          <div class="service-layer layer-2">
+            <div class="service-block two">
+              <div class="service-text">Brand</div>
+              <div class="service-svg" data-lottie="lottie-identity.json"></div>
+              <div class="service-text">Identity</div>
+              <div class="service-block-para-wrapper">
+                <p class="service-block-para">We give your brand a distinctive look, feel and personality that feel unmistakably yours.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layer 3: Web Design -->
+          <div class="service-layer layer-3">
+            <div class="service-block three">
+              <div class="service-text">Web</div>
+              <div class="service-svg" data-lottie="lottie-web.json"></div>
+              <div class="service-text">Design</div>
+              <div class="service-block-para-wrapper">
+                <p class="service-block-para">We turn your brand into a digital experience that looks great, feels right and is easy to navigate.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layer 4: Illustration -->
+          <div class="service-layer layer-4">
+            <div class="service-block four">
+              <div class="service-text">Illustration</div>
+              <div class="service-svg" data-lottie="lottie-illustration.json"></div>
+              <div class="service-block-para-wrapper">
+                <p class="service-block-para">We create distinctive illustrations that add character to your brand.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layer 5: Motion Design -->
+          <div class="service-layer layer-5">
+            <div class="service-block five">
+              <div class="service-text">Motion</div>
+              <div class="service-svg" data-lottie="lottie-motion.json"></div>
+              <div class="service-text">Design</div>
+              <div class="service-block-para-wrapper">
+                <p class="service-block-para">We make your brand move, cause standing still just isn’t enough.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layer 6: Packaging Design -->
+          <div class="service-layer layer-6">
+            <div class="service-block six">
+              <div class="service-text">Packaging</div>
+              <div class="service-svg" data-lottie="lottie-packaging.json"></div>
+              <div class="service-text">Design</div>
+              <div class="service-block-para-wrapper">
+                <p class="service-block-para">We create packaging that catches the eye and works better for your brand.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layer 7: Art Direction -->
+          <div class="service-layer layer-7">
+            <div class="service-block seven">
+              <div class="service-text">Art</div>
+              <div class="service-svg" data-lottie="lottie-art.json"></div>
+              <div class="service-text">Direction</div>
+              <div class="service-block-para-wrapper">
+                <p class="service-block-para">We keep all the moving parts moving in the same direction, from the big idea down to the smallest detail.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- The Exact Vector Curve from two26.studio -->
+        <div class="services-path">
+          <!-- Light Ghost Path (Behind) -->
+          <div class="services-path-svg">
+            <svg width="100%" height="auto" viewBox="0 0 1616 2187" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1601 15C1241.24 56.6913 1025.14 308.977 1139.71 377.393C1191.45 408.29 1240.74 339.444 1181.39 282.059C1075.45 179.627 937.582 215.243 741.458 298.287C701.638 315.147 622.383 350.59 552.298 410.201C487.298 465.486 487.725 549.018 534.765 563.77C581.804 578.523 632.714 579.634 681.058 587.392C729.731 595.202 767.011 617.17 797.836 657.756C833.766 705.065 838.864 772.034 862.127 825.767C890.491 891.283 966.341 911.2 1033.5 915.638C1130.56 922.052 1195.74 891.215 1286.16 899.069C1347.7 904.414 1457.75 932.208 1466.92 1059.42C1477.81 1210.68 1340.4 1252.99 1221.76 1286.05C1118.2 1314.91 997.775 1397.54 862.127 1334.5C757.468 1285.86 666.411 1293.34 650.401 1384.21C634.391 1475.07 710.968 1532.13 837.283 1542.81C963.598 1553.5 1146.44 1534.93 1181.39 1676C1226.53 1858.21 954.075 1839.5 797.836 1839.5C661.891 1839.5 422.283 1807.72 385.5 1700C340.427 1568 635.939 1584.37 465.5 1917C414.516 2016.5 310 2165.31 15 2165.31" stroke="#1162dd" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <!-- Dark Active Filled Path (Animated by ScrollTrigger) -->
+          <div class="services-path-svg-dark">
+            <svg width="100%" height="auto" viewBox="0 0 1616 2187" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1601 15C1241.24 56.6913 1025.14 308.977 1139.71 377.393C1191.45 408.29 1240.74 339.444 1181.39 282.059C1075.45 179.627 937.582 215.243 741.458 298.287C701.638 315.147 622.383 350.59 552.298 410.201C487.298 465.486 487.725 549.018 534.765 563.77C581.804 578.523 632.714 579.634 681.058 587.392C729.731 595.202 767.011 617.17 797.836 657.756C833.766 705.065 838.864 772.034 862.127 825.767C890.491 891.283 966.341 911.2 1033.5 915.638C1130.56 922.052 1195.74 891.215 1286.16 899.069C1347.7 904.414 1457.75 932.208 1466.92 1059.42C1477.81 1210.68 1340.4 1252.99 1221.76 1286.05C1118.2 1314.91 997.775 1397.54 862.127 1334.5C757.468 1285.86 666.411 1293.34 650.401 1384.21C634.391 1475.07 710.968 1532.13 837.283 1542.81C963.598 1553.5 1146.44 1534.93 1181.39 1676C1226.53 1858.21 954.075 1839.5 797.836 1839.5C661.891 1839.5 422.283 1807.72 385.5 1700C340.427 1568 635.939 1584.37 465.5 1917C414.516 2016.5 310 2165.31 15 2165.31" stroke="#2e7eff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <!-- 3D Start Plug Hole -->
+          <div class="blockhole-start">
+            <svg width="33" height="38" viewBox="0 0 33 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="20.5" cy="34.5" rx="12.5" ry="3.5" fill="black"/>
+              <ellipse cx="12.4585" cy="18.0159" rx="12.4357" ry="18" fill="#2e7eff"/>
+              <path d="M12.4808 0.51593C15.7039 0.520059 18.673 2.41469 20.8561 5.5833C23.0378 8.74988 24.4002 13.1493 24.3939 18.0312C24.3877 22.9131 23.014 27.309 20.8243 30.47C18.633 33.633 15.659 35.52 12.436 35.5159C9.21293 35.5117 6.24369 33.6171 4.06061 30.4485C1.87899 27.282 0.516586 22.8824 0.52284 18.0006C0.529093 13.1188 1.90276 8.72279 4.09249 5.56183C6.28368 2.39886 9.25776 0.511855 12.4808 0.51593Z" stroke="#0b111e"/>
+            </svg>
+          </div>
+          <!-- 3D End Plug Hole -->
+          <div class="blackhole-end">
+            <svg width="33" height="38" viewBox="0 0 33 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="20.5" cy="34.5" rx="12.5" ry="3.5" fill="black"/>
+              <ellipse cx="12.4585" cy="18.0159" rx="12.4357" ry="18" fill="#2e7eff"/>
+              <path d="M12.4808 0.51593C15.7039 0.520059 18.673 2.41469 20.8561 5.5833C23.0378 8.74988 24.4002 13.1493 24.3939 18.0312C24.3877 22.9131 23.014 27.309 20.8243 30.47C18.633 33.633 15.659 35.52 12.436 35.5159C9.21293 35.5117 6.24369 33.6171 4.06061 30.4485C1.87899 27.282 0.516586 22.8824 0.52284 18.0006C0.529093 13.1188 1.90276 8.72279 4.09249 5.56183C6.28368 2.39886 9.25776 0.511855 12.4808 0.51593Z" stroke="#0b111e"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING SECTION: "FLEXIBLE PLAN FOR EVERY STAGE OF GROWTH" ===== -->
+  <section class="pricing-section" id="pricing" aria-label="Pricing Plans">
+    
+    <!-- Ambient Horizon Glow (As seen in reference image) -->
+    <div class="pricing-horizon-glow" aria-hidden="true"></div>
+
+    <div class="pricing-container">
+      
+      <!-- Top Section Header (Centered with Serif/Sans Hybrid Typography) -->
+      <div class="pricing-header">
+        <h2 class="pricing-title reveal-fade-up" style="--fade-i: 1;">
+          <span class="pricing-title-serif">Flexible plan for</span><br>
+          <span class="pricing-title-sans">Every stage of Growth</span>
+        </h2>
+        <p class="pricing-subtitle reveal-fade-up" style="--fade-i: 2;">
+          Choose a plan that matches your design goals and scale effortlessly as your brand grows.
+        </p>
+
+        <!-- Toggle Switch -->
+        <div class="pricing-toggle-wrap reveal-fade-up" style="--fade-i: 3;">
+          <div class="pricing-toggle" role="tablist" aria-label="Pricing mode">
+            <button type="button" class="pricing-toggle-btn is-active" id="pricingTabMonthly" role="tab" aria-selected="true" aria-controls="pricingMonthlyGrid">
+              <span>Monthly plans</span>
+            </button>
+            <button type="button" class="pricing-toggle-btn" id="pricingTabProject" role="tab" aria-selected="false" aria-controls="pricingProjectGrid">
+              <span>Project-based</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Panels -->
+      <div class="pricing-panels">
+        
+        <!-- 1. Monthly Subscription Plans -->
+        <div class="pricing-grid is-active" id="pricingMonthlyGrid" role="tabpanel" aria-labelledby="pricingTabMonthly">
+          
+          <!-- Card 1: SPARK -->
+          <article class="pricing-card" data-plan="spark">
+            <div class="pricing-card-header">
+              <div class="plan-title-row">
+                <div class="plan-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                  </svg>
+                </div>
+                <h3 class="plan-name">Spark</h3>
+              </div>
+              <p class="plan-tagline">For growing businesses with regular design needs.</p>
+              <div class="plan-price-group">
+                <span class="plan-price price-blue">$999</span>
+                <span class="plan-period">/month</span>
+              </div>
+            </div>
+
+            <div class="plan-divider" aria-hidden="true"></div>
+
+            <ul class="plan-features">
+              <li><span class="feature-bullet">•</span><span>One request at a time</span></li>
+              <li><span class="feature-bullet">•</span><span>Landing page design</span></li>
+              <li><span class="feature-bullet">•</span><span>Website UI design</span></li>
+              <li><span class="feature-bullet">•</span><span>Responsive designs</span></li>
+              <li><span class="feature-bullet">•</span><span>Figma source files</span></li>
+              <li><span class="feature-bullet">•</span><span>Unlimited requests</span></li>
+              <li><span class="feature-bullet">•</span><span>Unlimited revisions</span></li>
+              <li><span class="feature-bullet">•</span><span>3–5 day average delivery</span></li>
+            </ul>
+
+            <div class="plan-footer">
+              <a href="#contact" class="plan-btn btn-metallic">Get started</a>
+            </div>
+          </article>
+
+          <!-- Card 2: STUDIO (Recommended with Blue Cap) -->
+          <article class="pricing-card card-recommended" data-plan="studio">
+            <div class="recommended-cap">Recommended</div>
+            <div class="pricing-card-inner">
+              <div class="pricing-card-header">
+                <div class="plan-title-row">
+                  <div class="plan-icon-box icon-active">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M3 3v18h18"/>
+                      <path d="M18 17V9"/>
+                      <path d="M13 17V5"/>
+                      <path d="M8 17v-3"/>
+                    </svg>
+                  </div>
+                  <h3 class="plan-name">Studio</h3>
+                </div>
+                <p class="plan-tagline">For growing teams that need more control.</p>
+                <div class="plan-price-group">
+                  <span class="plan-price price-white">$1,999</span>
+                  <span class="plan-period">/month</span>
+                </div>
+              </div>
+
+              <div class="plan-divider" aria-hidden="true"></div>
+
+              <ul class="plan-features">
+                <li><span class="feature-bullet">•</span><span>Everything in Spark</span></li>
+                <li><span class="feature-bullet">•</span><span>Web &amp; mobile app design</span></li>
+                <li><span class="feature-bullet">•</span><span>SaaS &amp; dashboard UI</span></li>
+                <li><span class="feature-bullet">•</span><span>Design systems</span></li>
+                <li><span class="feature-bullet">•</span><span>One request at a time</span></li>
+                <li><span class="feature-bullet">•</span><span>Unlimited requests &amp; revisions</span></li>
+                <li><span class="feature-bullet">•</span><span>2–3 day average delivery</span></li>
+                <li><span class="feature-bullet">•</span><span>Priority support &amp; 2 calls/mo</span></li>
+              </ul>
+
+              <div class="plan-footer">
+                <a href="#contact" class="plan-btn btn-electric">Choose The Plan</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: PARTNER -->
+          <article class="pricing-card" data-plan="partner">
+            <div class="pricing-card-header">
+              <div class="plan-title-row">
+                <div class="plan-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                    <path d="M9 22v-4h6v4"/>
+                    <path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M8 14h.01M16 14h.01"/>
+                  </svg>
+                </div>
+                <h3 class="plan-name">Partner</h3>
+              </div>
+              <p class="plan-tagline">For larger teams and organizations.</p>
+              <div class="plan-price-group">
+                <span class="plan-price price-blue">$3,499</span>
+                <span class="plan-period">/month</span>
+              </div>
+            </div>
+
+            <div class="plan-divider" aria-hidden="true"></div>
+
+            <ul class="plan-features">
+              <li><span class="feature-bullet">•</span><span>Everything in Studio</span></li>
+              <li><span class="feature-bullet">•</span><span>Two active requests at a time</span></li>
+              <li><span class="feature-bullet">•</span><span>Priority design queue</span></li>
+              <li><span class="feature-bullet">•</span><span>1–2 day average delivery</span></li>
+              <li><span class="feature-bullet">•</span><span>Complex product design</span></li>
+              <li><span class="feature-bullet">•</span><span>UX flows &amp; wireframes</span></li>
+              <li><span class="feature-bullet">•</span><span>Weekly strategy call</span></li>
+              <li><span class="feature-bullet">•</span><span>Dedicated design support</span></li>
+            </ul>
+
+            <div class="plan-footer">
+              <a href="#contact" class="plan-btn btn-metallic">Contact Sales</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- 2. Project-Based Plans (Same high-end dark styling) -->
+        <div class="pricing-grid" id="pricingProjectGrid" role="tabpanel" aria-labelledby="pricingTabProject" hidden>
+          
+          <!-- Card 1: LANDING PAGE -->
+          <article class="pricing-card" data-plan="landing">
+            <div class="pricing-card-header">
+              <div class="plan-title-row">
+                <div class="plan-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <h3 class="plan-name">Landing Page</h3>
+              </div>
+              <p class="plan-tagline">Single high-converting page for a launch, product or campaign.</p>
+              <div class="plan-price-group">
+                <span class="plan-price price-blue">$1k</span>
+                <span class="plan-period">one time</span>
+              </div>
+            </div>
+
+            <div class="plan-divider" aria-hidden="true"></div>
+
+            <ul class="plan-features">
+              <li><span class="feature-bullet">•</span><span>Design and Webflow build</span></li>
+              <li><span class="feature-bullet">•</span><span>Responsive and animated</span></li>
+              <li><span class="feature-bullet">•</span><span>Basic SEO setup</span></li>
+              <li><span class="feature-bullet">•</span><span>1 round of revisions</span></li>
+              <li><span class="feature-bullet">•</span><span>Figma source assets</span></li>
+              <li><span class="feature-bullet">•</span><span>3–5 day delivery</span></li>
+            </ul>
+
+            <div class="plan-footer">
+              <a href="#contact" class="plan-btn btn-metallic">Book a call</a>
+            </div>
+          </article>
+
+          <!-- Card 2: WEBSITE (Recommended) -->
+          <article class="pricing-card card-recommended" data-plan="website">
+            <div class="recommended-cap">Recommended</div>
+            <div class="pricing-card-inner">
+              <div class="pricing-card-header">
+                <div class="plan-title-row">
+                  <div class="plan-icon-box icon-active">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/>
+                      <line x1="2" y1="12" x2="22" y2="12"/>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                  </div>
+                  <h3 class="plan-name">Website</h3>
+                </div>
+                <p class="plan-tagline">Complete site with CMS, ready to grow with your brand.</p>
+                <div class="plan-price-group">
+                  <span class="plan-price price-white">$2k</span>
+                  <span class="plan-period">one time</span>
+                </div>
+              </div>
+
+              <div class="plan-divider" aria-hidden="true"></div>
+
+              <ul class="plan-features">
+                <li><span class="feature-bullet">•</span><span>Up to 6 custom pages</span></li>
+                <li><span class="feature-bullet">•</span><span>CMS for blog or projects</span></li>
+                <li><span class="feature-bullet">•</span><span>SEO and analytics setup</span></li>
+                <li><span class="feature-bullet">•</span><span>2 rounds of revisions</span></li>
+                <li><span class="feature-bullet">•</span><span>Custom micro-interactions</span></li>
+                <li><span class="feature-bullet">•</span><span>30 days post-launch support</span></li>
+              </ul>
+
+              <div class="plan-footer">
+                <a href="#contact" class="plan-btn btn-electric">Book a call</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: CARE PLAN -->
+          <article class="pricing-card" data-plan="care">
+            <div class="pricing-card-header">
+              <div class="plan-title-row">
+                <div class="plan-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <h3 class="plan-name">Care Plan</h3>
+              </div>
+              <p class="plan-tagline">Ongoing design and updates after launch, without hiring in house.</p>
+              <div class="plan-price-group">
+                <span class="plan-price price-blue">$600</span>
+                <span class="plan-period">/month</span>
+              </div>
+            </div>
+
+            <div class="plan-divider" aria-hidden="true"></div>
+
+            <ul class="plan-features">
+              <li><span class="feature-bullet">•</span><span>New sections and pages</span></li>
+              <li><span class="feature-bullet">•</span><span>Content and CMS updates</span></li>
+              <li><span class="feature-bullet">•</span><span>Priority replies &amp; SLAs</span></li>
+              <li><span class="feature-bullet">•</span><span>Performance &amp; SEO health</span></li>
+              <li><span class="feature-bullet">•</span><span>Cancel anytime</span></li>
+            </ul>
+
+            <div class="plan-footer">
+              <a href="#contact" class="plan-btn btn-metallic">Book a call</a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+      <!-- Reassurance Footer Note -->
+      <div class="pricing-footer reveal-fade-up">
+        <p class="pricing-guarantee">No contracts. Pause or cancel anytime.</p>
+        <div class="pricing-trust-row">
+          <span class="trust-badge"><span class="trust-star">✱</span> Predictable rate</span>
+          <span class="trust-badge"><span class="trust-star">✱</span> Direct Slack channel</span>
+          <span class="trust-badge"><span class="trust-star">✱</span> 24–48h kickoff</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CTA BANNER SECTION (Hero Liquid Glass Image Slider Effect & Borderless Design)
+       ========================================================================== -->
+  <section class="cta-section" id="contact" aria-label="Start a project">
+    <div class="cta-container">
+      <div class="cta-card" id="ctaCard">
+        <!-- Liquid Glass Image Slider Surface (Identical to Hero Carousel Engine) -->
+        <div class="cta-carousel-surface" id="ctaCarouselSurface"></div>
+        <div class="cta-carousel-overlay" aria-hidden="true"></div>
+
+        <!-- 2-Column Banner Layout -->
+        <div class="cta-banner-content">
+          <!-- Left Column: Pill, Title, Subtitle -->
+          <div class="cta-col-left">
+            <div class="cta-badge-pill">
+              <span class="cta-badge-icon">✦</span>
+              <span class="cta-badge-text">Available for Q4</span>
+            </div>
+            <h2 class="cta-banner-title">
+              Ready to Elevate Your Brand?
+            </h2>
+            <p class="cta-banner-desc">
+              Don’t settle for ordinary templates. Partner with senior Webflow specialists to build an iconic digital presence that converts.
+            </p>
+          </div>
+
+          <!-- Right Column: Dual Buttons & Social Proof -->
+          <div class="cta-col-right">
+            <div class="cta-btn-group">
+              <a href="mailto:hello@unlimitedwf.com" class="btn-cta-white plan-btn" data-magnetic>
+                <span>Book a Discovery Call</span>
+                <span class="cta-btn-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="#pricing" class="btn-cta-ghost plan-btn" data-magnetic>
+                <span>Explore Pricing</span>
+              </a>
+            </div>
+
+            <!-- Social Proof: Overlapping Avatars + 5/5 Rating -->
+            <div class="cta-proof-row">
+              <div class="cta-avatar-stack" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Client 1" class="cta-avatar-img" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80" alt="Client 2" class="cta-avatar-img" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&h=120&q=80" alt="Client 3" class="cta-avatar-img" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80" alt="Client 4" class="cta-avatar-img" loading="lazy" />
+              </div>
+              <div class="cta-proof-text">
+                <span class="cta-proof-stars">★★★★★</span>
+                <span class="cta-proof-label">5/5 (50+ happy founders)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer brand-footer" aria-label="Site Footer">
+    <!-- Dynamic Cursor-Following Aurora Light (Rises from bottom & blends with website black background) -->
+    <div class="footer-aurora-wrap" id="footerAurora" aria-hidden="true">
+      <div class="aurora-ambient-glow"></div>
+      <div class="aurora-light-curtain"></div>
+      <div class="aurora-cursor-beam"></div>
+      <div class="aurora-horizon-crest"></div>
+    </div>
+
+    <div class="footer-container">
+      
+      <!-- Main Upper Content Grid -->
+      <div class="footer-main-grid">
+        
+        <!-- Left Column: Bold Headline, Let's Talk CTA, Email -->
+        <div class="footer-col-left">
+          <h2 class="footer-headline">
+            Okay, that's<br>
+            enough<br>
+            website
+          </h2>
+
+          <div class="footer-cta-action">
+            <a href="mailto:hello@unlimitedwf.com" class="footer-talk-btn plan-btn" data-magnetic aria-label="Let's Talk">
+              <span class="talk-text">Let's Talk</span>
+              <span class="talk-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Navigation & Studio Info -->
+        <div class="footer-col-right">
+          <div class="footer-nav-top-row">
+            <!-- Nav: Main Menu -->
+            <div class="footer-nav-group">
+              <span class="footer-group-title">Main Menu</span>
+              <ul class="footer-nav-links">
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+              </ul>
+            </div>
+
+            <!-- Nav: Social -->
+            <div class="footer-nav-group">
+              <span class="footer-group-title">Connect</span>
+              <ul class="footer-nav-links">
+                <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram ↗</a></li>
+                <li><a href="https://behance.net" target="_blank" rel="noopener">Behance ↗</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X ↗</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Interactive Action Rows (01 Book a call / 02 Send an email) -->
+          <div class="footer-action-list">
+            <!-- 01: Book a call -->
+            <a href="https://cal.com/unlimitedwf" target="_blank" rel="noopener" class="footer-action-row" aria-label="Book a call">
+              <span class="footer-action-num">01</span>
+              <div class="footer-action-content">
+                <div class="footer-action-header">
+                  <span class="footer-action-title">Book a call</span>
+                  <span class="footer-action-arrow" aria-hidden="true">↗</span>
+                </div>
+                <span class="footer-action-sub">30 min / no pitch deck required</span>
+              </div>
+            </a>
+
+            <!-- 02: Send an email -->
+            <a href="mailto:hello@unlimitedwf.com" class="footer-action-row" aria-label="Send an email">
+              <span class="footer-action-num">02</span>
+              <div class="footer-action-content">
+                <div class="footer-action-header">
+                  <span class="footer-action-title">Send an email</span>
+                  <span class="footer-action-arrow" aria-hidden="true">↗</span>
+                </div>
+                <span class="footer-action-sub">hello@unlimitedwf.com</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Mid Meta Bar: Copyright & Back to Top -->
+      <div class="footer-mid-bar">
+        <span class="footer-copyright-text">© Copyright 2026 - UnlimitedWF Studio</span>
+        <a href="#hero" class="footer-back-to-top" aria-label="Back to top">
+          <span>Back to top</span>
+          <span aria-hidden="true">↑</span>
+        </a>
+      </div>
+
+      <!-- Colossal Bottom Wordmark (UWF logo.svg in pure white flush to bottom) -->
+      <div class="footer-massive-logo-wrap" aria-hidden="true">
+        <img src="UWF logo.svg" alt="UnlimitedWF" class="footer-massive-logo-img" />
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Interactive Hint Tooltip Card -->
+  <div class="intro-hint-popup" id="hintPopup" aria-hidden="true">
+    <div class="hint-arrow" aria-hidden="true"></div>
+    <div class="hint-panel">
+      <p id="hintText"></p>
+    </div>
+  </div>
+
+  <!-- Full-Resolution Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Project Preview">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">&times;</button>
+      <img src="" alt="Enlarged project preview" id="lightboxImg" class="lightbox-image" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- GSAP, ScrollTrigger & Lottie Core Engines (Offline Local) -->
+  <script src="gsap.min.js"></script>
+  <script src="ScrollTrigger.min.js"></script>
+  <script src="DrawSVGPlugin.min.js"></script>
+  <script src="lottie.min.js"></script>
+
+  <!-- Main ES Module Script -->
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
